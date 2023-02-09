@@ -1,5 +1,5 @@
 ---
-title: "Coinstr: Bitcoin signature orchestration on nostr"
+title: "Coinstr: Bitcoin signature orchestration on Nostr"
 date : 2023-02-08
 author : Max Gravitt
 ---
@@ -18,16 +18,16 @@ Twitter, like most web 2.0 products, uses your email address and password to aut
 2. The company owns all of **your** data instead of the **you**, the content creator.
 3. The company decides how information is featured, censored, and how it is shared.
 
-Just as Bitcoin is freedom money, nostr is freedom media. It uses a similar architecture.
+Just as Bitcoin is freedom money, Nostr is freedom media. It uses a similar architecture.
 
-nostr accounts are comprised of a public and private key pair, where **only** the user has access to the private key. The network is distributed across open source, independently operated [relays](https://nostr-resources.com/#relays), which are "dumb servers that you can leave behind at any time (so they can’t turn evil). You need to connect your client to a relay for it to work. There are many relays & you can run your own."
+Nostr accounts are comprised of a public and private key pair, where **only** the user has access to the private key. The network is distributed across open source, independently operated [relays](https://nostr-resources.com/#relays), which are "dumb servers that you can leave behind at any time (so they can’t turn evil). You need to connect your client to a relay for it to work. There are many relays & you can run your own."
 
-When you post a comment or note (like a tweet), you submit it to multiple relays and it can then be queried by clients. Just as their are multiple implementations of Bitcoin nodes and clients (wallets), there are multiple implementations of relays and nostr clients. Most of them are open source. 
+When you post a comment or note (like a tweet), you submit it to multiple relays and it can then be queried by clients. Just as their are multiple implementations of Bitcoin nodes and clients (wallets), there are multiple implementations of relays and Nostr clients. Most of them are open source. 
 
 I enjoy using [Damus](https://damus.io) on iOS, and I've been building Coinstr with [open source rust libraries](https://github.com/rust-nostr/nostr). 
 
 # 🪙 What is Coinstr? 
-Coinstr is a multisignature Bitcoin wallet that allows users to configure complex spending policies, like [Bitcoin smart contracts](https://river.com/learn/what-are-bitcoin-smart-contracts/). When a spending proposal is made, Coinstr uses the nostr protocol to orchestrate signature requests and approvals. 
+Coinstr is a multisignature Bitcoin wallet that allows users to configure complex spending policies, like [Bitcoin smart contracts](https://river.com/learn/what-are-bitcoin-smart-contracts/). When a spending proposal is made, Coinstr uses the Nostr protocol to orchestrate signature requests and approvals. 
 
 # 💸 Spending Policies
 If you have a teenager, you will recognize the block shapes in the diagram below as the [Blockly](https://developers.google.com/blockly), the tool of choice used to teach kids to code.
@@ -48,16 +48,16 @@ The Coinstr blockly interface is inspired by [Bitcoin Development Kit's Elephant
 # 🎶 Signature Orchestration
 When Bitcoin in this wallet is being spent, 6 signature requests must be created and sent to the corresponding parties with the appropriate data about the spending proposal. For example, it should include what it is being spent on, perhaps an invoice number, who is receiving the payment, etc. 
 
-This is where `nostr` comes in. 
+This is where Nostr comes in. 
 
-Nostr uses [Schnorr signatures](https://river.com/learn/what-are-schnorr-signatures/), which is the same crytographic primitive used for Bitcoin spending policies (namely Taproot). So the nostr clients already have ready access to the private key(s) and signing libraries to also sign Bitcoin transactions.
+Nostr uses [Schnorr signatures](https://river.com/learn/what-are-schnorr-signatures/), which is the same crytographic primitive used for Bitcoin spending policies (namely Taproot). So the Nostr clients already have ready access to the private key(s) and signing libraries to also sign Bitcoin transactions.
 
 The users will each receive a notification that they have a new spending proposal to review, which they can evaluate and approve or deny in just a few taps. 
 
 # 🛡️ Security
-Using a distributed protocol like `nostr` for orchestration of signature requests removes intermediaries such as wallet developers or centralized exchanges from the spending process, making it much more secure. 
+Using a distributed protocol like Nostr for orchestration of signature requests removes intermediaries such as wallet developers or centralized exchanges from the spending process, making it much more secure. 
 
-Some users may sign with a Twitter-like app (e.g. Damus), some may use a hardware wallet, and some may use a browser plugin. Since Coinstr uses only core Bitcoin protocols, it is compatible with users who may not even be using a nostr client. 
+Some users may sign with a Twitter-like app (e.g. Damus), some may use a hardware wallet, and some may use a browser plugin. Since Coinstr uses only core Bitcoin protocols, it is compatible with users who may not even be using a Nostr client. 
 
 Coinstr is fully open source and relies on no intermediaries for safe and stable usage. 
 
