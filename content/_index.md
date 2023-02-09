@@ -4,14 +4,14 @@ date : 2023-02-08
 author : Max Gravitt
 ---
 
-# `coinstr` is Bitcoin spending policy and signature orchestration using Taproot and `nostr`
+# Coinstr is Bitcoin spending policy and signature orchestration using Taproot and Nostr
 
 <br />
 
-[View `coinstr` on Github](https://github.com/3yekn/coinstr)
+[View Coinstr on Github](https://github.com/3yekn/coinstr)
 
-# 🗒️ What is `nostr`?
-[nostr](https://nostr-resources.com/) is one of the most interesting new projects I've come across in quite some time. It is a protocol for decentralized social media, among other things. 
+# 🗒️ What is Nostr?
+[Nostr](https://nostr-resources.com/) is one of the most interesting new projects I've come across in quite some time. It is a protocol for decentralized social media, among other things. 
 
 Twitter, like most web 2.0 products, uses your email address and password to authenticate to you to their services, and then they let you read and write to those services as they wish. This model has a number of problems.
 1. Products are monetized through advertising, creating a dark underbelly of paid influence.
@@ -26,7 +26,7 @@ When you post a comment or note (like a tweet), you submit it to multiple relays
 
 I enjoy using [Damus](https://damus.io) on iOS, and I've been building Coinstr with [open source rust libraries](https://github.com/rust-nostr/nostr). 
 
-# 🪙 What is coinstr? 
+# 🪙 What is Coinstr? 
 Coinstr is a multisignature Bitcoin wallet that allows users to configure complex spending policies, like [Bitcoin smart contracts](https://river.com/learn/what-are-bitcoin-smart-contracts/). When a spending proposal is made, Coinstr uses the nostr protocol to orchestrate signature requests and approvals. 
 
 # 💸 Spending Policies
@@ -43,7 +43,7 @@ This type of policy is commonly known in business as a delegation of authority, 
 
 ![Example Spending Policy](spending-policies.png)
 
-The coinstr blockly interface is inspired by [Bitcoin Development Kit's Elephant product](https://github.com/bitcoindevkit/elephant).
+The Coinstr blockly interface is inspired by [Bitcoin Development Kit's Elephant product](https://github.com/bitcoindevkit/elephant).
 
 # 🎶 Signature Orchestration
 When Bitcoin in this wallet is being spent, 6 signature requests must be created and sent to the corresponding parties with the appropriate data about the spending proposal. For example, it should include what it is being spent on, perhaps an invoice number, who is receiving the payment, etc. 
@@ -57,7 +57,7 @@ The users will each receive a notification that they have a new spending proposa
 # 🛡️ Security
 Using a distributed protocol like `nostr` for orchestration of signature requests removes intermediaries such as wallet developers or centralized exchanges from the spending process, making it much more secure. 
 
-Some users may sign with a Twitter-like app (e.g. Damus), some may use a hardware wallet, and some may use a browser plugin. Since coinstr uses only core Bitcoin protocols, it is compatible with users who may not even be using a nostr client. 
+Some users may sign with a Twitter-like app (e.g. Damus), some may use a hardware wallet, and some may use a browser plugin. Since Coinstr uses only core Bitcoin protocols, it is compatible with users who may not even be using a nostr client. 
 
 Coinstr is fully open source and relies on no intermediaries for safe and stable usage. 
 

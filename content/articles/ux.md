@@ -4,7 +4,7 @@ date : 2023-02-08
 author : Max Gravitt
 ---
 
-coinstr has two user types: 
+Coinstr has two user types: 
 1. power users that configure spending policies 
 2. spending proposal approvers
 
