@@ -10,7 +10,7 @@ The CLI allows users to inspect users, publish events, subscribe to events, and 
 
 Creating spending policies shows the tree of satisifiable conditions in the terminal. 
 
-![coinstr-policy-simple.png](http://localhost:1313/articles/2023-02-14-dev-update/coinstr-policy-simple.png)
+![coinstr-policy-simple.png](coinstr-policy-simple.png)
 
 # Next Steps
 - Construct transactions and the corresponding signature requests required for a spend
