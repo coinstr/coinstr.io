@@ -24,3 +24,5 @@ Creating spending policies shows the tree of satisifiable conditions in the term
 - Establish the Go-to-Market plan
 
 ![coinstr-policy.png](coinstr-policy.png)
+
+[View Coinstr on Github](https://github.com/3yekn/coinstr)
