@@ -7,11 +7,11 @@ slug: vs-fireblocks
 authors: Max Gravitt
 ---
 <head>
-  <title>Hashed Network vs Fireblocks Comparison</title>
+  <title>Coinstr vs Fireblocks Comparison</title>
   <meta charSet="utf-8" />
   <meta property="og:image" content="https://coinstr.app/coinstr-mindmap.png" />
   <meta property="og:description" content="Detailed head-to-head comparison between Hashed Network and Fireblocks" />
-  <meta property="og:title" content="Hashed Network vs Fireblocks Comparison" />
+  <meta property="og:title" content="Coinstr vs Fireblocks Comparison" />
   <meta property="og:url" content="https://coinstr.app/articles/vs-fireblocks" />
 </head>
 
