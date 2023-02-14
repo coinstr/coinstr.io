@@ -24,15 +24,15 @@ Coinstr is a multisignature Bitcoin wallet that allows users to configure comple
 
 {{< plantuml id="au" >}}
 @startmindmap
-+ Coinstr
-++ Coin/UTXO Control
-++ Send Signature Requests to Users
-++ Receive Signatures
-++ Broadcast Transactions
--- Bitcoin Wallet
--- Build Spending Policies
--- Apply Spending Policies to Users
--- Create Spending Proposals
++[#orange] Coinstr
+++[#yellow] Coin/UTXO Control
+++[#lightgreen] Send Signature Requests to Users
+++[#yellow] Receive Signatures
+++[#yellow] Broadcast Transactions
+--[#lightgreen] Bitcoin Wallet
+--[#lightgreen] Build Spending Policies
+--[#yellow] Apply Spending Policies to Users
+--[#lightgreen] Create Spending Proposals
 @endmindmap{{< /plantuml >}}
 
 # 🗒️ What is Nostr?
