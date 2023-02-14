@@ -2,6 +2,8 @@
 title: "👤 Coinstr User Experience"
 date : 2023-02-08
 author : Max Gravitt
+  - business
+  - tech
 ---
 
 Coinstr has two user types: 

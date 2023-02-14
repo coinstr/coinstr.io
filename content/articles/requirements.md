@@ -2,6 +2,9 @@
 title: "🗒️ Coinstr Requirements"
 date : 2023-02-08
 author : Max Gravitt
+tags: 
+  - business
+  - tech
 ---
 
 This document tracks some of the Coinstr requirements. 

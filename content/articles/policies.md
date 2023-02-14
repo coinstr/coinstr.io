@@ -2,6 +2,8 @@
 title: "💸 Spending Policy Deep Dive"
 date : 2023-02-08
 author : Max Gravitt
+tags: 
+  - business
 ---
 
 # What can be used in a spending policy? 

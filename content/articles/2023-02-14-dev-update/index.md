@@ -1,6 +1,9 @@
 ---
 title: "👨‍💻 Development Update"
 date : 2023-02-14
+tags : 
+  - business
+  - tech
 author : Max Gravitt
 ---
 
@@ -26,4 +29,5 @@ Creating spending policies shows the tree of satisifiable conditions in the term
 ![coinstr-policy.png](coinstr-policy.png)
 
 [View Coinstr on Github](https://github.com/3yekn/coinstr)
+
 [Follow me on Nostr](https://snort.social/p/npub1ws2t95pdtpna4ps62rrz75mm6ujsudjv70yj2jk4wsqjhedlw22qsqwew9)
