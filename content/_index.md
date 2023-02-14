@@ -7,7 +7,7 @@ author : Max Gravitt
 <head>
   <title>Coinstr: Bitcoin signature orchestration on Nostr</title>
   <meta charSet="utf-8" />
-  <meta property="og:image" content="https://coinstr.app/coinstr-policy.png" />
+  <meta property="og:image" content="https://coinstr.app/articles/2023-02-14-dev-update/coinstr-policy-simple.png" />
   <meta property="twitter:description" content="Coinstr: Bitcoin signature orchestration on Nostr" />
   <meta property="og:description" content="Coinstr: Bitcoin signature orchestration on Nostr" />
   <meta property="og:title" content="Coinstr: Bitcoin signature orchestration on Nostr" />
