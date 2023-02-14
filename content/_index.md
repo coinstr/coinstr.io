@@ -4,11 +4,36 @@ date : 2023-02-08
 author : Max Gravitt
 ---
 
+<head>
+  <title>Coinstr: Bitcoin signature orchestration on Nostr</title>
+  <meta charSet="utf-8" />
+  <meta property="og:image" content="https://coinstr.app/coinstr-policy.png" />
+  <meta property="twitter:description" content="Coinstr: Bitcoin signature orchestration on Nostr" />
+  <meta property="og:description" content="Coinstr: Bitcoin signature orchestration on Nostr" />
+  <meta property="og:title" content="Coinstr: Bitcoin signature orchestration on Nostr" />
+  <meta property="og:url" content="https://coinstr.app" />
+</head>
+
 # Coinstr is Bitcoin spending policy and signature orchestration using Taproot and Nostr
 
 <br />
 
 [View Coinstr on Github](https://github.com/3yekn/coinstr)
+# 🪙 What is Coinstr? 
+Coinstr is a multisignature Bitcoin wallet that allows users to configure complex spending policies, like [Bitcoin smart contracts](https://river.com/learn/what-are-bitcoin-smart-contracts/). When a spending proposal is made, Coinstr uses the Nostr protocol to orchestrate signature requests and approvals. 
+
+{{< plantuml id="au" >}}
+@startmindmap
++ Coinstr
+++ Coin/UTXO Control
+++ Send Signature Requests to Users
+++ Receive Signatures
+++ Broadcast Transactions
+-- Bitcoin Wallet
+-- Build Spending Policies
+-- Apply Spending Policies to Users
+-- Create Spending Proposals
+@endmindmap{{< /plantuml >}}
 
 # 🗒️ What is Nostr?
 [Nostr](https://nostr-resources.com/) is one of the most interesting new projects I've come across in quite some time. It is a protocol for decentralized social media, among other things. 
@@ -26,8 +51,6 @@ When you post a comment or note (like a tweet), you submit it to multiple relays
 
 I enjoy using [Damus](https://damus.io) on iOS, and I've been building Coinstr with [open source rust libraries](https://github.com/rust-nostr/nostr). 
 
-# 🪙 What is Coinstr? 
-Coinstr is a multisignature Bitcoin wallet that allows users to configure complex spending policies, like [Bitcoin smart contracts](https://river.com/learn/what-are-bitcoin-smart-contracts/). When a spending proposal is made, Coinstr uses the Nostr protocol to orchestrate signature requests and approvals. 
 
 # 💸 Spending Policies
 If you have a teenager, you will recognize the block shapes in the diagram below as the [Blockly](https://developers.google.com/blockly), the tool of choice used to teach kids to code.
@@ -54,6 +77,8 @@ Nostr uses [Schnorr signatures](https://river.com/learn/what-are-schnorr-signatu
 
 The users will each receive a notification that they have a new spending proposal to review, which they can evaluate and approve or deny in just a few taps. 
 
+![coinstr-policy.png](articles/2023-02-14-dev-update/coinstr-policy.png)
+
 # 🛡️ Security
 Using a distributed protocol like Nostr for orchestration of signature requests removes intermediaries such as wallet developers or centralized exchanges from the spending process, making it much more secure. 
 
@@ -66,3 +91,5 @@ In the real world, spending policies often require some sequencing. For example,
 
 Coinstr adds a layer of smart-sequencing to spending policies to make multisignature more practical and user friendly.
 
+# Open Source
+Coinstr is MIT and Apache licensed. 
