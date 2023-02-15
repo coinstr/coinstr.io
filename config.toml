@@ -1,6 +1,6 @@
 baseURL = 'https://constr.app'
 languageCode = 'en-us'
-title = 'coinstr'
+title = 'Coinstr'
 paginate = 3
 theme = 'maverick'
 

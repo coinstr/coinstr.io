@@ -19,7 +19,10 @@ author : Max Gravitt
 
 <br />
 
-[View Coinstr on Github](https://github.com/3yekn/coinstr)
+View [Coinstr on Github](https://github.com/3yekn/coinstr)
+
+View [High Level Visual Overview as Google Slides](https://docs.google.com/presentation/d/1E4WwSgt4ZKr1M9SmmVELpf2ckhmqC237idLumCKP7Eg)
+
 # 🪙 What is Coinstr? 
 Coinstr is a multisignature Bitcoin wallet that allows users to configure complex spending policies, like [Bitcoin smart contracts](https://river.com/learn/what-are-bitcoin-smart-contracts/). When a spending proposal is made, Coinstr uses the Nostr protocol to orchestrate signature requests and approvals. 
 
