@@ -95,7 +95,7 @@ Coinstr is a mash-up of several existing, well-known open source projects.
 - Rust Miniscript
 
 ## Side by Side Comparison Table
- ||Fireblocks|Coinstr|
+ |Category|Fireblocks|Coinstr|
     |---|---|---|
     |Technology|Propreitary|Substrate-based|
     |Cryptography|Multiparty Computation (MPC)|Bitcoin Core [BIP 174](https://en.bitcoin.it/wiki/BIP_0174), and the taproot upgrade, [BIP 340](https://en.bitcoin.it/wiki/BIP_0340), [BIP 341](https://en.bitcoin.it/wiki/BIP_0341), and [BIP 342](https://en.bitcoin.it/wiki/BIP_0342)|
