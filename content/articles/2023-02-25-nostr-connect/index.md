@@ -23,10 +23,10 @@ authors: Max Gravitt
 
 </head>
 
-Coinstr uses [Nostr Connect NIP-46](https://github.com/nostr-protocol/nips/blob/master/46.md) to safely and securely orchestrate signatures among users. To best understand the full context of NIP-46 and signature orchestration, let's review the common UX patterns for Nostr, Bitcoin, and crypto transactions. For simplicity, this analysis does not include multisignature, hardware, or cold wallets.
+Coinstr uses [Nostr Connect NIP-46](https://github.com/nostr-protocol/nips/blob/master/46.md) to safely and securely orchestrate signatures among users. To best understand the full context of NIP-46 and signature orchestration, let's review the common UX patterns for Nostr, Bitcoin, and crypto transactions. (For simplicity, this analysis does not include multisignature, hardware, or cold wallets.)
 
 ## 🖥️ Method #1: Desktop Application
-In this scenario, a desktop application is either compiled from source or a binary is downloaded from the application's site, a package manager such as `apt`, or a propreitary service such as Apple's App store. Keys are input and stored with the primary application that the user is engaging with. 
+A desktop application is either compiled from source or a binary is downloaded from the application's site, a package manager such as `apt`, or a propreitary service such as Apple's App store. Keys are input and stored with the primary application that the user is engaging with. 
 
 Pros: 
 - Desktop applications are generally considered more secure than browsers because they do not share memory space with other applications. 
@@ -35,14 +35,14 @@ Pros:
 Cons:
 - Downloading and installing a desktop application is usually too high of a hurdle for most users.
 - Many (more corporate) businesses do not allow users to install new desktop applications without going through an onerous IT department process.
-- Storing the private key with the application that has knowledge about the power or wealth of that key creates a conflict of interest and honeypot.
+- Storing the private key with the application that has knowledge about the power or wealth of that key creates a conflict of interest and honeypot of temptation for compromised developers.
 
 Examples: 
 - Sparrow and Electrum (Bitcoin)
 - Gossip, Monstr, and nostr-console (Nostr)
 
 ## 🌐 Method #2: Desktop Browser - web 2 style
-In most common web2 applications, users re-key or paste their password into a web form text box to authenticate. In web2, these passwords are typically hashed or encrypted and returned to the server where it is compared to the hash of the password that the application has on record for that user. In **some**, albeit few, web3 or nostr applications, users will paste their private key into a text box and the local, in-browser application (SPA/PWA) will use it to sign transactions. 
+In most web2 applications, users re-key or paste their password into a web form text box to authenticate. These passwords are typically hashed, with the result returned to the server where it is compared to the hash of the password that the application has on record for that user. In some, albeit few, web3 or nostr applications, users will paste their private key into a text box and the local, in-browser application (SPA/PWA) will use it to sign transactions. 
 
 Pros:
 - Easiest possible UX, lowest hurdles. I imagine many of the early nostr users, especially experimenters, started by navigating to one of the web applications, and generated an in-browser key.
@@ -135,7 +135,7 @@ Last week, NIP-46 was merged to the main branch of the NIPs repo. This NIP enabl
 
 Under development by the same team building [Coinstr](https://coinstr.app) is Hancock, a mobile signature application.
 
-Hancock signer uses NIP-46 and Nostr relays to handle signature orchestration for Nostr events, partially signed bitcoin transactions, limited shit coin transactions, and DocuSign-style ricardian contracts. 
+Hancock signer uses NIP-46 and Nostr relays to handle signature orchestration for Nostr events, partially signed bitcoin transactions, limited web3 transactions, and DocuSign-style ricardian contracts. 
 
 Hancock provides core individual freedoms with a single mnemonic (private key) in a single application.
 - Freedom of property (bitcoin)
