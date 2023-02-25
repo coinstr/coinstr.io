@@ -1,4 +1,4 @@
-baseURL = 'https://constr.app'
+baseURL = 'https://coinstr.app'
 languageCode = 'en-us'
 title = 'Coinstr'
 paginate = 3
@@ -32,11 +32,11 @@ theme = 'maverick'
     name = "Articles"
     url = "/articles/"
     weight = -200
-  # [[menu.main]]
-  #   identifier = "contact"
-  #   name = "Contact"
-  #   url = "/contact/"
-  #   weight = -150
+  [[menu.main]]
+    identifier = "contact"
+    name = "Contact"
+    url = "/contact/"
+    weight = -150
 
 [markup]
   [markup.goldmark.renderer]

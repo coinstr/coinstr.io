@@ -1,17 +1,17 @@
 ---
-title: "Coinstr: Bitcoin signature orchestration on Nostr"
+title: "Coinstr: Bitcoin multi-custody signature orchestration"
 date : 2023-02-08
 author : Max Gravitt
 ---
 
 <head>
-  <title>Coinstr: Bitcoin signature orchestration on Nostr</title>
+  <title>Coinstr: Bitcoin multi-custody signature orchestration</title>
   <meta charSet="utf-8" />
-  <meta property="og:image" content="https://coinstr.app/articles/2023-02-14-dev-update/coinstr-policy-simple.png" />
-  <meta property="twitter:description" content="Coinstr: Bitcoin signature orchestration on Nostr" />
-  <meta property="twitter:image" content="https://coinstr.app/articles/2023-02-14-dev-update/coinstr-policy-simple.png" />
-  <meta property="og:description" content="Coinstr: Bitcoin signature orchestration on Nostr" />
-  <meta property="og:title" content="Coinstr: Bitcoin signature orchestration on Nostr" />
+  <meta property="og:image" content="https://coinstr.app/coinstr.png" />
+  <meta property="twitter:description" content="Coinstr is Bitcoin multi-custody signature orchestration on Nostr" />
+  <meta property="twitter:image" content="https://coinstr.app/coinstr.png" />
+  <meta property="og:description" content="Coinstr is Bitcoin multi-custody signature orchestration on Nostr" />
+  <meta property="og:title" content="Coinstr is Bitcoin multi-custody signature orchestration on Nostr" />
   <meta property="og:url" content="https://coinstr.app" />
 </head>
 
