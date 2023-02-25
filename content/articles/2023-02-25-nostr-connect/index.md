@@ -106,7 +106,7 @@ This method separates secret storage and signature generation from the primary a
 The user reviews the information on their device to ensure it matches the action they performed in browser, tap to approve, the signature is returned to the browser, where it is broadcast to a relay or blockchain.
 
 Pros: 
-- Mobile device is the safest place way to sign with and store hot keys, everybody has one and knows how to use it.
+- Mobile device is the safest way to sign with and store hot keys; everybody has one and knows how to use it.
 - Conflict of interest issue is resolved because the *dumb* signer often does not know the context (associated power or wealth) of what is being signed.
 - Same mobile application can be used to sign across browsers, computers, applications, and even blockchains or signature types.
 - Simplicity- because signing is a simple and atomic process, the application itself can be fewer lines of code with less complexity and fewer dependencies.
