@@ -13,13 +13,13 @@ authors: Max Gravitt
   <meta charSet="utf-8" />
   <meta property="og:title" content="🔌 Using Nostr Connect for Safe Signatures" />
   <meta property="og:image" content="https://coinstr.app/coinstr.png" />
-  <meta property="og:description" content="This article describes the 5 methods for signing Nostr events and Bitcoin transactions. Coinstr uses Nostr Connect (NIP-46) to safely and securely orchestrate signatures among users. To best understand the full context of NIP-46 and signature orchestration, let's review the common UX patterns for Nostr, Bitcoin, and crypto transactions." />
+  <meta property="og:description" content="This article describes the pros and cons of the five methods for signing Nostr events and Bitcoin transactions. Coinstr uses Nostr Connect (NIP-46) to safely and securely orchestrate signatures among users." />
   <meta property="og:url" content="https://coinstr.app/articles/nostr-connect" />
   <meta name="twitter:title" content="🔌 Using Nostr Connect for Safe Signatures" />
   <meta name="twitter:creator" content="@MaxGravitt">
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content="https://coinstr.app/coinstr.png" />
-  <meta name="twitter:description" content="This article describes the 5 methods for signing Nostr events and Bitcoin transactions. Coinstr uses Nostr Connect (NIP-46) to safely and securely orchestrate signatures among users. To best understand the full context of NIP-46 and signature orchestration, let's review the common UX patterns for Nostr, Bitcoin, and crypto transactions." />
+  <meta name="twitter:description" content="This article describes the pros and cons of the five methods for signing Nostr events and Bitcoin transactions. Coinstr uses Nostr Connect (NIP-46) to safely and securely orchestrate signatures among users." />
 
 </head>
 
