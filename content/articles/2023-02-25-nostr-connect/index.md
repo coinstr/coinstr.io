@@ -115,7 +115,7 @@ Cons:
 - Still at risk of censorship resistance a.la App stores, but much less so because the user does not do any "posting" or "sending" from the application itself.
 
 ### Example: Fireblocks 
-Fireblocks is a propreitary multi-custody workflow system used by manage custodians and exchanges. The primary application is a web-based (where the user is still authenticated in a web2 manner) but asset transfers are sent as approvals to their mobile application. Fireblocks is a private company [valued at $8 billion](https://www.fireblocks.com/blog/550m-series-e-zero-to-crypto/).
+Fireblocks is a propreitary multi-custody workflow system used by custodians and major exchanges. The primary application is a web-based (where the user is still authenticated in a web2 manner) but asset transfers are sent as approvals to their mobile application. Fireblocks is a private company [valued at $8 billion](https://www.fireblocks.com/blog/550m-series-e-zero-to-crypto/).
 
 ![image](https://user-images.githubusercontent.com/32852271/221362838-bdc94733-6db4-4b3f-8d15-7bb8c64345c5.png)
 
