@@ -24,6 +24,10 @@ authors: Max Gravitt
 
 Nostr Connect can be used to create a seamless flow where users do their work in the browser, while signing using their devices safely and securely. This articles describes the UX and specific message flows for how a circuit is created and how Bob can login to update and publish his work from multiple devices.
 
+This video is a demo of the rust-nostr libraries that implement NIP-46.
+
+{{< youtube dhPV58k9YNY >}}
+
 # 📱 Logging In
 {{< plantuml id="au" >}}
 @startuml
@@ -122,6 +126,11 @@ I am an admitted and unashamed stalker of open source developers. I noticed that
 [Coinstr](https://coinstr.app) is very interested in using this protocol to sign more than Nostr events, especially Bitcoin. We will keep a close eye on what transpires.
 
 <img src="https://user-images.githubusercontent.com/32852271/222914638-fe23a97b-d616-428e-8c52-42e316881c60.png" width="400"/>
+
+# Web3 Signing with Anchor on Telos
+This is unrelated to Nostr and Nostr Connect, but the general UX of remote signing is very well done. It demonstrates using a remote signer on Telos.
+
+{{< youtube 2XYVnsAgyyM >}}
 
 [Follow Max on Nostr](https://snort.social/p/npub1ws2t95pdtpna4ps62rrz75mm6ujsudjv70yj2jk4wsqjhedlw22qsqwew9) to report any errors and for more articles and information about innovation around Nostr, Bitcoin and Lightning.
 
