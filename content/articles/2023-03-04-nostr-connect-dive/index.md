@@ -1,5 +1,5 @@
 ---
-title: 🤿 Nostr Connect Deep Dive
+title: 🤿 Nostr Connect Technical Deep Dive
 date : 2023-03-04
 tags:
   - security
@@ -8,7 +8,7 @@ slug: nostr-connect-deep-dive
 authors: Max Gravitt
 ---
 <head>
-  <title>🤿 Nostr Connect Deep Dive</title>
+  <title>🤿 Nostr Connect Technical Deep Dive</title>
   <meta charSet="utf-8" />
   <meta property="og:title" content="🤿 Nostr Connect Deep Dive" />
   <meta property="og:image" content="https://coinstr.app//articles/nostr-connect-deep-dive/bob-login-cover.png" />
@@ -65,9 +65,9 @@ At this point, Bob is logged into the application on his browser. He may start t
 
 Let's say that he authors a long paper using markdown on his computer. He is not quite finished, but he wants to save it as a draft. 
 
-In the application, he can perform a **Save** action. This would encrypt the document locally and send it to the relay which will forward it over the subscription to Bob's Phone. The device would ask Bob if he approves saving that event to his private own DMs (Notes to Self). 
+In the application, he can perform a **Save** action. This would encrypt the document locally and send it to the relay which will forward it over the subscription to Bob's Phone. The device would ask Bob if he approves saving that event to his private own DM Notes to Self <font color=red>(msgs 10-11)</font>.
 
-When Bob approves, the signed event is returned the Bob's Browser via the Relay, where the WebApp then sends it to the relay as a NIP-04 encrypted message. 
+When Bob approves, the signed event is returned the Bob's Browser via the Relay, where the WebApp then sends it to the relay as a NIP-04 encrypted message <font color=red>(msgs 12-14)</font>. 
 
 {{< plantuml id="auq" >}}
 @startuml
@@ -80,18 +80,18 @@ Relay ->  "Bobs Phone": Bob approves, Signs event\n encapsulated in a \nwrapper 
 Relay -> "Bobs Browser": Receives, discards wrapper \nas ephemeral, and broadcasts \nthe signed note\n to the relay to be \nstored in Bobs Messages to Self
 @enduml{{< /plantuml >}}
 
-> Do we need a LOG-OFF event to inform the Browser to end the subsciption? (and also erase any local data)
+> *Do we need a LOG-OFF event to inform the Browser to end the subscription? (and also erase any local data)*
 
 # 💻 Later that Day (or Year)
 Later that day, Bob begins working on his laptop and wants to finalize his paper and publish it to Nostr. 
 
-Bob goes to the URL of the application on his laptop browser and scans the QR to Login. The same login sequence that occurred at the beginning occurs again to create a session.
+Bob goes to the URL of the application on his laptop browser and scans the QR to Login <font color=red>(msg 20)</font>. The same login sequence that occurred at the beginning occurs again to create a session.
 
-Once logged in, Bob sees his content within his Notes to Self and continues to edit and proofread. When he is complete, it clicks 'Post' to submit the content as a normal Nostr event. 
+Once logged in, Bob sees his content within his Notes to Self and continues to edit and proofread. When he is complete, it clicks 'Post' to submit the content as a normal Nostr event <font color=red>(msg 22)</font>. 
 
-That click in the Browser constructs an Event and encapsulates it in wrapper event to send to Bob's Phone over the relay. Bob reviews the hash of the event in the browser and on the device to know it is the same one, and then approves.
+That click in the Browser constructs an Event and encapsulates it in wrapper event to send to Bob's Phone over the relay. Bob reviews the hash of the event in the browser and on the device to know it is the same one, and then approves <font color=red>(msg 23)</font>.
 
-The approval is sent back to Bob's Browser where it is broadcast to a relay as the public post. It is only at this point that the content is accessible unencrypted by any audience or component outside of Bob's local systems.
+The approval is sent back to Bob's Browser where it is broadcast to a relay as the public post. It is only at this point that the content is accessible unencrypted by any audience or component outside of Bob's local systems <font color=red>(msg 24)</font>.
 
 {{< plantuml id="auz" >}}
 @startuml
@@ -108,10 +108,14 @@ hnote over Relay : Event is saved as \na Public Post
 # ✨ Summary
 Establishing secure, flexible, and real time communications between the browser and application and device makes many great use cases available for Nostr. 
 
-# Bitcoin Signatures in Nostr Connect
-I am an admitted and unashamed stalker. I noticed that yesterday, the author of the [Nostr Connect](https://github.com/nostr-connect/connect) protocol and the reference implementation [Nostrum](https://github.com/nostr-connect/nostrum) starred and forked a Javascript library for **signing and decoding Bitcoin transactions**. [Coinstr](https://coinstr.app) is very interested in using this protocol to sign more than Nostr events, especially Bitcoin. We will keep a close eye on what transpires.
+<hr/>
 
-![image](https://user-images.githubusercontent.com/32852271/222914638-fe23a97b-d616-428e-8c52-42e316881c60.png)
+# ₿ Postscript: Bitcoin Signatures in Nostr Connect (??)
+I am an admitted and unashamed stalker of open source developers. I noticed that yesterday, the author of the [Nostr Connect](https://github.com/nostr-connect/connect) protocol and the reference implementation [Nostrum](https://github.com/nostr-connect/nostrum) starred and forked a Javascript library for **signing and decoding Bitcoin transactions**. 
+
+[Coinstr](https://coinstr.app) is very interested in using this protocol to sign more than Nostr events, especially Bitcoin. We will keep a close eye on what transpires.
+
+<img src="https://user-images.githubusercontent.com/32852271/222914638-fe23a97b-d616-428e-8c52-42e316881c60.png" width="400"/>
 
 [Follow Max on Nostr](https://snort.social/p/npub1ws2t95pdtpna4ps62rrz75mm6ujsudjv70yj2jk4wsqjhedlw22qsqwew9) for more articles and information about innovation around Nostr, Bitcoin and Lightning.
 
