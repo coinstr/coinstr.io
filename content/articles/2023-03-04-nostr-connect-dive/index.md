@@ -44,7 +44,9 @@ hnote over "Bobs Browser" : Bob's Phone is connected \nto Bob's Browser
 The URI string has a format like the `uri` below.
 ```js
 const pubkey = "pubkey-representing-the-browser"
+
 const relay = "wss://which-relay-the-parties-will-use-to-bounce-events.com"
+
 const applicationName = "Content Authoring Application Name"
 
 const uri = `nostrconnect://${pubkey}?relay=${encodeURIComponent(relay)}&
