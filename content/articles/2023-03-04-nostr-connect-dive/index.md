@@ -10,11 +10,11 @@ authors: Max Gravitt
 <head>
   <title>🤿 Nostr Connect Technical Deep Dive</title>
   <meta charSet="utf-8" />
-  <meta property="og:title" content="🤿 Nostr Connect Deep Dive" />
+  <meta property="og:title" content="🤿 Nostr Connect Technical Deep Dive" />
   <meta property="og:image" content="https://coinstr.app//articles/nostr-connect-deep-dive/bob-login-cover.png" />
   <meta property="og:description" content="Nostr Connect can be used to create a seamless and intuitive flow between applications where users do their work and their remote signing devices safely and securely." />
   <meta property="og:url" content="https://coinstr.app/articles/nostr-connect-deep-dive" />
-  <meta name="twitter:title" content="🤿 Nostr Connect Deep Dive" />
+  <meta name="twitter:title" content="🤿 Nostr Connect Technical Deep Dive" />
   <meta name="twitter:creator" content="@MaxGravitt">
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content="https://coinstr.app//articles/nostr-connect-deep-dive/bob-login-cover.png" />
