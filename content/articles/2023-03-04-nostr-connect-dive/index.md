@@ -41,17 +41,21 @@ hnote over "Bobs Browser" : Bob's Phone is connected \nto Bob's Browser
 
 <font color=red>msg 1.</font> The webapp uses its private key to post a message to the relay that is awaiting for a party to establish a session. It also make a QR code or `nostrconnect://` link available on the site to scan. The `nostrconnect` string is static, and so the QR code is as well. 
 
-The URI string has a format like the `uri` below.
-```js
+The URI string has a format like the `uri` below. 
+```javascript
 const pubkey = "pubkey-representing-the-browser"
-
+```
+```javascript
 const relay = "wss://which-relay-the-parties-will-use-to-bounce-events.com"
-
+```
+```javascript
 const applicationName = "Content Authoring Application Name"
-
+```
+```javascript
 const uri = `nostrconnect://${pubkey}?relay=${encodeURIComponent(relay)}&
                 metadata=${encodeURIComponent(JSON.stringify({"name": applicationName}))}`
 ```
+
 <font color=red>msg 2.</font> Bob scans the the QR code and is asked whether to approve sending a Login proof to the WebApp in Bob's Browser.
 
 <font color=red>msg 3.</font> After signing, Bob broadcasts the message to the relay that was provided in the QR code. He does not broadcast this to other relays. 
