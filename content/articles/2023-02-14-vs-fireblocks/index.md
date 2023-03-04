@@ -95,20 +95,7 @@ Coinstr is a mash-up of several existing, well-known open source projects.
 - Rust Miniscript
 
 ## Side by Side Comparison Table
- |Category|Fireblocks|Coinstr|
-    |---|---|---|
-    |Technology|Propreitary|Substrate-based|
-    |Cryptography|Multiparty Computation (MPC)|Bitcoin Core [BIP 174](https://en.bitcoin.it/wiki/BIP_0174), and the taproot upgrade, [BIP 340](https://en.bitcoin.it/wiki/BIP_0340), [BIP 341](https://en.bitcoin.it/wiki/BIP_0341), and [BIP 342](https://en.bitcoin.it/wiki/BIP_0342)|
-    |Asset Types|44 protocols and thousands of tokens|Bitcoin, selected USD stablecoins, and DOT-native|
-    |User-facing Apps|Web app and mobile app for 2FA approvals|Web app and mobile app signer|
-    |Compatible Signers|Only Fireblocks apps|Any Bitcoin or Nostr signer, including hardware and air-gapped signers|
-    |Verifiable Receiving Addresses|No|Yes|
-    |Central Admin Required|Yes|No|
-    |Decentralizable|No|Yes|
-    |License|Propreitary/Closed|[Open-Source](https://github.com/3yekn/coinstr)|
-    |Starting Price|$10,000 per month|TBD - seeking partners - contact below|
-    |Valuation|[$ 8 B](https://techcrunch.com/2022/01/27/crypto-infrastructure-company-fireblocks-nearly-quadruples-valuation-to-8b-in-six-months/?guccounter=1&guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&guce_referrer_sig=AQAAADVcB8hiYZN0UpSb41kVicCAHlfYQsXfkot5DgeJ66zJMhNCEp9J2YXOd6DgCuYgYV4wlT8chccxuyzftcUO4jYWcKRdVwECvxuXXpqTsz7oGAwA2NucZdnpUjPLwkcDozFysEW-3BxaP03pUcmjC-xe58RMUwLrGnMlAbysnRZd)|Contact Below|
-    |Revenue|$100 M+|Pre-revenue 😅|
+<img src="table-vs-fireblocks.png" />
 
 ## Contact
 To learn more about Coinstr, contact via the [web form](https://maxgravitt.com/contact/) or [Nostr](https://snort.social/p/npub1ws2t95pdtpna4ps62rrz75mm6ujsudjv70yj2jk4wsqjhedlw22qsqwew9)
