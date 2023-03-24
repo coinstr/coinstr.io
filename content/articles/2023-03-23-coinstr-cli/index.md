@@ -23,6 +23,7 @@ The companion video walks through the steps of the tutorial.
 <iframe width="560" height="315" src="https://www.youtube.com/embed/jW5_6kZWuWU" frameborder="0" allowfullscreen></iframe>
 
 Here are the activities that we will cover in the tutorial:
+
 {{< plantuml id="au" >}}
 @startuml
 left to right direction
@@ -65,6 +66,7 @@ Create keys and save them to keychains. I've used the keychain names of `frank` 
 ```
 ./target/release/coinstr-cli generate --password 1234 --passphrase "" frank
 ```
+
 ```
 ./target/release/coinstr-cli generate --password 1234 --passphrase "" gary
 ```
@@ -95,10 +97,9 @@ thresh(2,pk(5e61551ceb04521181d9ad40295e32dce5dc5609c4612a3239dbc60c30080dcd),pk
 ## Step 3: Save the Policy 
 Save the policy using the key, policy name, policy description, and the output descriptor.
 
-```
 Usage: coinstr-cli save-policy <NAME> <POLICY_NAME> <POLICY_DESCRIPTION> <POLICY_DESCRIPTOR>
-```
 
+*Command*
 ```
 COINSTR_PASSWORD=1234 ./target/release/coinstr-cli save-policy frank "Multisig 2 of 2" "Testing multisig as part of the Coinstr CLI tutorial" "thresh(2,pk(5e61551ceb04521181d9ad40295e32dce5dc5609c4612a3239dbc60c30080dcd),pk(d223b67e6091ef0665188a4016d20a51a7bbb1b240fafc4429bf1329527338d1))"
 ```
@@ -117,8 +118,6 @@ You can see the details of the policy by calling `get policy`:
 COINSTR_PASSWORD=1234 ./target/release/coinstr-cli --network testnet get policy frank b4d4e03aaf64e58495f1eab7192a205b6607ec45f9aadbf7332734195f331fcc
 ```
 
-> NOTE: Gary has the same policy saved into his list.
-
 Produces the following output: 
 ![image](get-policy.png)
 
@@ -127,9 +126,8 @@ Use the [testnet bitcoin faucet](https://testnet-faucet.com/btc-testnet/) to req
 
 ## Step 5: Generate a Spend Proposal
 We will create the spend proposal from Alice's perspective. to create a spend proposal: 
-```
-Usage: coinstr-cli spend <NAME> <POLICY_ID> <TO_ADDRESS> <AMOUNT> <MEMO>
-```
+
+**Usage**: coinstr-cli spend <NAME> <POLICY_ID> <TO_ADDRESS> <AMOUNT> <MEMO>
 
 ```
 COINSTR_PASSWORD=1234 ./target/release/coinstr-cli --network testnet spend frank b4d4e03aaf64e58495f1eab7192a205b6607ec45f9aadbf7332734195f331fcc mohjSavDdQYHRYXcS3uS6ttaHP8amyvX78 1000 "Send back to the faucet"
