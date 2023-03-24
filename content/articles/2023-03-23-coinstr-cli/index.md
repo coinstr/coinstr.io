@@ -61,29 +61,7 @@ COINSTR_PASSWORD=1234 ./target/release/coinstr-cli --network testnet inspect fra
 ```
 
 This will show the mnemonic as well as useful key-related derived information for both Nostr and Bitcoin.
-
-```
-Mnemonic: document now all cable kitten recall outside song liquid still sister engine
-Passphrase: 
-
-Nostr
- Bech32 Keys
-  Public   : npub1tes4288tq3fprqwe44qzjh3jmnjac4sfc3sj5v3em0rqcvqgphxsj7652f 
-  Private  : nsec1t5845hnslzfvveyazj3nlcy69qxz5564v5qh5mrueewcavxexmuqx2yv0h 
- Hex Keys
-  Public   : 5e61551ceb04521181d9ad40295e32dce5dc5609c4612a3239dbc60c30080dcd 
-  Private  : 5d0f5a5e70f892c6649d14a33fe09a280c2a535565017a6c7cce5d8eb0d936f8 
-  Normalized Public   : 035e61551ceb04521181d9ad40295e32dce5dc5609c4612a3239dbc60c30080dcd 
-
-Bitcoin
-  Root Private Key: tprv8ZgxMBicQKsPfDBozE3WYukpnYybXyUfFMAFbqARzft6USFZJpkkUQSzgo7FCew2zNbdbmnttL57qh3HLkBUd59TGonUBw2rTcENe8hMvLt
-  Extended Pub Key: tpubD6NzVbkrYhZ4YgDbssi6xKQwMaVXhJfZpem2tMCjQwgVJvWKwDaLeu4rrtRLSxUfZxBpMHCgL7zEsbjTDx8FuttBq49Hvnfddxmw5wyWaq3
-  Output Descriptor: tr([b3de2233/86'/1'/0']tpubDDr2LYycsYfkApXGXpsTKXz9yuwSYeeuPyNHTiS3bVzM3ab7CZifpVmk9CJxBa5Ueu5uakusH1NWWitQ1Kg8fwnVc6H9ad7RcSUSBx9GujA/0/*)#nhpcgk5a
-  Change Descriptor: tr([b3de2233/86'/1'/0']tpubDDr2LYycsYfkApXGXpsTKXz9yuwSYeeuPyNHTiS3bVzM3ab7CZifpVmk9CJxBa5Ueu5uakusH1NWWitQ1Kg8fwnVc6H9ad7RcSUSBx9GujA/1/*)#zrye4ry9
-  Ext Address 1: tb1pm5c5gpx4ljcg2qykhqkc3hr45mlphupqmh4kqyxt6wzhe4wk06rsh282k6
-  Ext Address 2: tb1pwg8mpatfm9fj5lavehfrrjr6yfm2043tjxf4dm05fgff7ha6an9s3y20d6
-  Change Address: tb1puakeecj6vuar3tvce7c7l6wxvj2tajjps2yesa24qhrk62jwzkpsggxmes
-```
+![image](inspect-keys.png)
 
 ## Step 2: Create the 2-of-2 Policy
 Using miniscript, we will create a 2 of 2 multisignature policy that follows this format: 
