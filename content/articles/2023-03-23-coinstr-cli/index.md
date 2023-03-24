@@ -59,14 +59,14 @@ git clone https://github.com/NostrDevKit/coinstr.git && cd coinstr && cargo buil
 ## Step 2. Setup Keys
 Create keys and save them to keychains. I've used the keychain names of `frank` and `gary`.
 
-> NOTE: Mnemonics will be printed but they don't need to be saved for this tutorial.
-
 `--password` is for encrypting your local keechain file, while `--passphrase` is applied to your mnemonic and alters the keys. Below, the password is set to `1234` and I am not using a passphrase.
 
+*Generate Frank's Key*
 ```
 ./target/release/coinstr-cli generate --password 1234 --passphrase "" frank
 ```
 
+*Generate Gary's Key*
 ```
 ./target/release/coinstr-cli generate --password 1234 --passphrase "" gary
 ```
