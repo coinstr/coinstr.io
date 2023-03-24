@@ -35,7 +35,9 @@ For this tutorial, you'll need to [install rust](https://rustup.rs) and also bui
 ## Step 1. Build Coinstr
 ```bash
 git clone https://github.com/NostrDevKit/coinstr.git
+
 cd coinstr
+
 cargo build --release
 ```
 
