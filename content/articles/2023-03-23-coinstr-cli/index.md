@@ -97,9 +97,8 @@ thresh(2,pk(5e61551ceb04521181d9ad40295e32dce5dc5609c4612a3239dbc60c30080dcd),pk
 ## Step 3: Save the Policy 
 Save the policy using the key, policy name, policy description, and the output descriptor.
 
-Usage: coinstr-cli save-policy <NAME> <POLICY_NAME> <POLICY_DESCRIPTION> <POLICY_DESCRIPTOR>
+**Usage**: coinstr-cli save-policy <NAME> <POLICY_NAME> <POLICY_DESCRIPTION> <POLICY_DESCRIPTOR>
 
-*Command*
 ```
 COINSTR_PASSWORD=1234 ./target/release/coinstr-cli save-policy frank "Multisig 2 of 2" "Testing multisig as part of the Coinstr CLI tutorial" "thresh(2,pk(5e61551ceb04521181d9ad40295e32dce5dc5609c4612a3239dbc60c30080dcd),pk(d223b67e6091ef0665188a4016d20a51a7bbb1b240fafc4429bf1329527338d1))"
 ```
@@ -141,10 +140,14 @@ Create the below table:
 ![image](get-proposal.png)
 
 ## Step 6: Approve a Spend Proposal
-Now we need to approve the proposal from both Alice and Bob's perspective.
+Now we need to approve the proposal from both Frank and Gary's perspective.
+
+*Approve from Frank:*
 ```
 COINSTR_PASSWORD=1234 ./target/release/coinstr-cli approve frank 807d1c70d1e793616f62e8293180188c9ca6310777c52e538531336051240aee
 ```
+
+*Approve from Gary:*
 ```
 COINSTR_PASSWORD=1234 ./target/release/coinstr-cli approve gary 807d1c70d1e793616f62e8293180188c9ca6310777c52e538531336051240aee
 ```
