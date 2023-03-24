@@ -16,7 +16,6 @@ authors: Max Gravitt
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content="https://coinstr.app/coinstr.png" />
   <meta name="twitter:description" content="This Coinstr CLI tutorial provides a step by step command line demo of using Coinstr to create and spend with a 2-of-2 multisignature." />
-
 </head>
 
 The companion video walks through the steps of the tutorial.
@@ -24,8 +23,27 @@ The companion video walks through the steps of the tutorial.
 <iframe width="560" height="315" src="https://www.youtube.com/embed/jW5_6kZWuWU" frameborder="0" allowfullscreen></iframe>
 
 Here are the activities that we will cover in the tutorial:
+{{< plantuml id="au" >}}
+@startuml
+left to right direction
+actor Frank as f
+actor Gary as g
 
-![image](https://user-images.githubusercontent.com/32852271/227331892-d8447b4b-09be-4faf-9e05-b700350d1332.png)
+usecase "Create Policy" as UC1
+usecase "Review Policy" as UC2
+usecase "Fund Policy" as UC3
+usecase "Create Spend Proposal" as UC4
+usecase "Approve Spend Proposal" as UC5
+usecase "Broadcast Transaction" as UC6
+
+f --> UC1
+f --> UC2
+f --> UC3
+f --> UC4
+f --> UC5
+g --> UC5
+g --> UC6
+@enduml{{< /plantuml >}}
 
 ## Step by Step - 2 of 2 Multisig
 This step by step guide shows how to create a 2 of 2 multisignature Bitcoin transaction using `coinstr-cli`. 
@@ -33,12 +51,8 @@ This step by step guide shows how to create a 2 of 2 multisignature Bitcoin tran
 For this tutorial, you'll need to [install rust](https://rustup.rs) and also build Coinstr.
 
 ## Step 1. Build Coinstr
-```bash
-git clone https://github.com/NostrDevKit/coinstr.git
-
-cd coinstr
-
-cargo build --release
+```
+git clone https://github.com/NostrDevKit/coinstr.git && cd coinstr && cargo build --release
 ```
 
 ## Step 2. Setup Keys
@@ -50,6 +64,8 @@ Create keys and save them to keychains. I've used the keychain names of `frank` 
 
 ```
 ./target/release/coinstr-cli generate --password 1234 --passphrase "" frank
+```
+```
 ./target/release/coinstr-cli generate --password 1234 --passphrase "" gary
 ```
 
@@ -80,12 +96,11 @@ thresh(2,pk(5e61551ceb04521181d9ad40295e32dce5dc5609c4612a3239dbc60c30080dcd),pk
 Save the policy using the key, policy name, policy description, and the output descriptor.
 
 ```
-COINSTR_PASSWORD=1234 \
-./target/release/coinstr-cli save-policy \
-    frank \
-    "Multisig 2 of 2" \
-    "Testing multisig as part of the Coinstr CLI tutorial" \
-    "thresh(2,pk(5e61551ceb04521181d9ad40295e32dce5dc5609c4612a3239dbc60c30080dcd),pk(d223b67e6091ef0665188a4016d20a51a7bbb1b240fafc4429bf1329527338d1))"
+Usage: coinstr-cli save-policy <NAME> <POLICY_NAME> <POLICY_DESCRIPTION> <POLICY_DESCRIPTOR>
+```
+
+```
+COINSTR_PASSWORD=1234 ./target/release/coinstr-cli save-policy frank "Multisig 2 of 2" "Testing multisig as part of the Coinstr CLI tutorial" "thresh(2,pk(5e61551ceb04521181d9ad40295e32dce5dc5609c4612a3239dbc60c30080dcd),pk(d223b67e6091ef0665188a4016d20a51a7bbb1b240fafc4429bf1329527338d1))"
 ```
 
 Now you can review the saved policies for frank using the following command: 
@@ -94,48 +109,18 @@ COINSTR_PASSWORD=1234 ./target/release/coinstr-cli get policies frank
 ```
 
 Produces: 
-```
-+---+------------------------------------------------------------------+-----------------+------------------------------------------------------+
-| # | ID                                                               | Name            | Description                                          |
-+===+==================================================================+=================+======================================================+
-| 1 | e2927eabd79c817df2e7e16be9f6125bba979259f41efe0f22cc9a33fc2b9824 | Multisig 2 of 2 | Testing multisig as part of the Coinstr CLI tutorial |
-+---+------------------------------------------------------------------+-----------------+------------------------------------------------------+
-```
+![image](get-policies.png)
+
 
 You can see the details of the policy by calling `get policy`: 
 ```
-COINSTR_PASSWORD=1234 ./target/release/coinstr-cli --network testnet \
-    get policy \
-    frank \
-    e2927eabd79c817df2e7e16be9f6125bba979259f41efe0f22cc9a33fc2b9824
+COINSTR_PASSWORD=1234 ./target/release/coinstr-cli --network testnet get policy frank b4d4e03aaf64e58495f1eab7192a205b6607ec45f9aadbf7332734195f331fcc
 ```
 
 > NOTE: Gary has the same policy saved into his list.
 
 Produces the following output: 
-```
-Policy
-- ID: e2927eabd79c817df2e7e16be9f6125bba979259f41efe0f22cc9a33fc2b9824
-- Name: Multisig 2 of 2
-- Description: Testing multisig as part of the Coinstr CLI tutorial
-- Descriptor
-└── id -> 8hmw3yl0
-    └── 👑 Threshold Condition   : 1 of 2 
-        ├── id -> en4snfs4
-        │   └── 🔑 Schnorr Sig of  <xonly-pk:bbbc8e8b39d46a289a51bd5029dde3c946b9e97be935dc1e59845aa3b36ae101>
-        └── id -> eh682v0m
-            └── 🤝 MultiSig  :  2 of 2
-                ├── 🔑 <xonly-pk:5e61551ceb04521181d9ad40295e32dce5dc5609c4612a3239dbc60c30080dcd>
-                └── 🔑 <xonly-pk:d223b67e6091ef0665188a4016d20a51a7bbb1b240fafc4429bf1329527338d1>
-
-Balances
-- Immature            	: 0 sats
-- Trusted pending     	: 0 sats
-- Untrusted pending   	: 0 sats
-- Confirmed           	: 0 sats
-
-Deposit address: tb1pw3kszzyg67crrevpgxnfkyh3zn045hdqp56cgspkufvuefz9rllszm7kss
-```
+![image](get-policy.png)
 
 ## Step 4: Get Testnet BTC from Faucet
 Use the [testnet bitcoin faucet](https://testnet-faucet.com/btc-testnet/) to request BTC for our policy. The deposit address is at the bottom of the output above.
@@ -145,52 +130,35 @@ We will create the spend proposal from Alice's perspective. to create a spend pr
 ```
 Usage: coinstr-cli spend <NAME> <POLICY_ID> <TO_ADDRESS> <AMOUNT> <MEMO>
 ```
+
 ```
-COINSTR_PASSWORD=1234 ./target/release/coinstr-cli --network testnet spend \
-    frank \
-    e2927eabd79c817df2e7e16be9f6125bba979259f41efe0f22cc9a33fc2b9824 \
-    mohjSavDdQYHRYXcS3uS6ttaHP8amyvX78 \
-    1000 \
-    "Send back to the faucet"
+COINSTR_PASSWORD=1234 ./target/release/coinstr-cli --network testnet spend frank b4d4e03aaf64e58495f1eab7192a205b6607ec45f9aadbf7332734195f331fcc mohjSavDdQYHRYXcS3uS6ttaHP8amyvX78 1000 "Send back to the faucet"
 ```
+
 You can now view the spend proposal:
 ```
 COINSTR_PASSWORD=1234 ./target/release/coinstr-cli get proposals frank
 ```
 Create the below table: 
-```
-+---+------------------------------------------------------------------+-----------+-------------------------+------------------------------------+------------+
-| # | ID                                                               | Policy ID | Memo                    | Address                            | Amount     |
-+===+==================================================================+===========+=========================+====================================+============+
-| 1 | 04ecf276638dc441aaac9eb8d6ae884f907e63d7f65d302515de5ada001d1e0e | e2927eabd | Send back to the faucet | mohjSavDdQYHRYXcS3uS6ttaHP8amyvX78 | 1 000 sats |
-+---+------------------------------------------------------------------+-----------+-------------------------+------------------------------------+------------+
-```
+![image](get-proposal.png)
 
 ## Step 6: Approve a Spend Proposal
 Now we need to approve the proposal from both Alice and Bob's perspective.
 ```
-./target/release/coinstr-cli --network testnet approve \
-    frank \
-    04ecf276638dc441aaac9eb8d6ae884f907e63d7f65d302515de5ada001d1e0e
-
-./target/release/coinstr-cli --network testnet approve \
-    gary \
-    04ecf276638dc441aaac9eb8d6ae884f907e63d7f65d302515de5ada001d1e0e
+COINSTR_PASSWORD=1234 ./target/release/coinstr-cli approve frank 807d1c70d1e793616f62e8293180188c9ca6310777c52e538531336051240aee
 ```
-
-> NOTE: if you try to broadcast the transaction before it is finalized, you will get an error such as `PSBT not finalized: [InputError(CouldNotSatisfyTr, 0), InputError(CouldNotSatisfyTr, 1)]`.
-
+```
+COINSTR_PASSWORD=1234 ./target/release/coinstr-cli approve gary 807d1c70d1e793616f62e8293180188c9ca6310777c52e538531336051240aee
+```
 
 ## Step 7: Broadcast the Transaction
 ```
-./target/release/coinstr-cli --network testnet broadcast \
-    gary \
-    04ecf276638dc441aaac9eb8d6ae884f907e63d7f65d302515de5ada001d1e0e
+COINSTR_PASSWORD=1234 ./target/release/coinstr-cli --network testnet broadcast gary 807d1c70d1e793616f62e8293180188c9ca6310777c52e538531336051240aee
 ```
 
-You will get a transaction-id that you can view with a block explorer: 
+You will get a transaction-id that you can view with a [block explorer](https://blockstream.info/testnet/tx/85e1b65c4e824dc04bb4ca6bce2c1ddf9b0a2d6f0887d0ccaba2fa1d9924fae9): 
 ```
-Transaction 56294f3e8071d621d7158d2c2690faf05e9b7a81aeed7e6e6f312b0a8eb6e5b5 broadcasted
+Transaction 85e1b65c4e824dc04bb4ca6bce2c1ddf9b0a2d6f0887d0ccaba2fa1d9924fae9 broadcasted
 
-Explorer: https://blockstream.info/testnet/tx/56294f3e8071d621d7158d2c2690faf05e9b7a81aeed7e6e6f312b0a8eb6e5b5 
+Explorer: https://blockstream.info/testnet/tx/85e1b65c4e824dc04bb4ca6bce2c1ddf9b0a2d6f0887d0ccaba2fa1d9924fae9
 ```
