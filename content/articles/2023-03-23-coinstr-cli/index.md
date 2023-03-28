@@ -8,13 +8,13 @@ authors: Max Gravitt
   <title>🚀 Coinstr Launches CLI for Bitcoin Multisig on Nostr</title>
   <meta charSet="utf-8" />
   <meta property="og:title" content="🚀 Coinstr Launches CLI for Bitcoin Multisig on Nostr" />
-  <meta property="og:image" content="https://coinstr.app/coinstr.png" />
+  <meta property="og:image" content="https://coinstr.io/coinstr.png" />
   <meta property="og:description" content="This Coinstr CLI tutorial provides a step by step command line demo of using Coinstr to create and spend with a 2-of-2 multisignature." />
-  <meta property="og:url" content="https://coinstr.app/articles/coinstr-cli-launch" />
+  <meta property="og:url" content="https://coinstr.io/articles/coinstr-cli-launch" />
   <meta name="twitter:title" content="🚀 Coinstr Launches CLI for Bitcoin Multisig on Nostr" />
   <meta name="twitter:creator" content="@MaxGravitt">
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="https://coinstr.app/coinstr.png" />
+  <meta name="twitter:image" content="https://coinstr.io/coinstr.png" />
   <meta name="twitter:description" content="This Coinstr CLI tutorial provides a step by step command line demo of using Coinstr to create and spend with a 2-of-2 multisignature." />
 </head>
 

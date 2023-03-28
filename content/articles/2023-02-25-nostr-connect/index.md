@@ -12,13 +12,13 @@ authors: Max Gravitt
   <title>🔌 Using Nostr Connect for Safe Signatures</title>
   <meta charSet="utf-8" />
   <meta property="og:title" content="🔌 Using Nostr Connect for Safe Signatures" />
-  <meta property="og:image" content="https://coinstr.app/coinstr.png" />
+  <meta property="og:image" content="https://coinstr.io/coinstr.png" />
   <meta property="og:description" content="This article describes the pros and cons of the five methods for signing Nostr events and Bitcoin transactions. Coinstr uses Nostr Connect (NIP-46) to safely and securely orchestrate signatures among users." />
-  <meta property="og:url" content="https://coinstr.app/articles/nostr-connect" />
+  <meta property="og:url" content="https://coinstr.io/articles/nostr-connect" />
   <meta name="twitter:title" content="🔌 Using Nostr Connect for Safe Signatures" />
   <meta name="twitter:creator" content="@MaxGravitt">
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="https://coinstr.app/coinstr.png" />
+  <meta name="twitter:image" content="https://coinstr.io/coinstr.png" />
   <meta name="twitter:description" content="This article describes the pros and cons of the five methods for signing Nostr events and Bitcoin transactions. Coinstr uses Nostr Connect (NIP-46) to safely and securely orchestrate signatures among users." />
 
 </head>
@@ -133,7 +133,7 @@ Last week, NIP-46 was merged to the main branch of the NIPs repo. This NIP enabl
 
 # 🤩 Coming Soon: Hancock Signer 🤩
 
-Under development by the same team building [Coinstr](https://coinstr.app) is Hancock, a mobile signature application.
+Under development by the same team building [Coinstr](https://coinstr.io) is Hancock, a mobile signature application.
 
 Hancock signer uses NIP-46 and Nostr relays to handle signature orchestration for Nostr events, partially signed bitcoin transactions, limited web3 transactions, and DocuSign-style ricardian contracts. 
 

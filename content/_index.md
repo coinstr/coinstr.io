@@ -7,12 +7,12 @@ author : Max Gravitt
 <head>
   <title>Coinstr: Bitcoin multi-custody signature orchestration</title>
   <meta charSet="utf-8" />
-  <meta property="og:image" content="https://coinstr.app/coinstr.png" />
+  <meta property="og:image" content="https://coinstr.io/coinstr.png" />
   <meta property="twitter:description" content="Coinstr is Bitcoin multi-custody signature orchestration on Nostr" />
-  <meta property="twitter:image" content="https://coinstr.app/coinstr.png" />
+  <meta property="twitter:image" content="https://coinstr.io/coinstr.png" />
   <meta property="og:description" content="Coinstr is Bitcoin multi-custody signature orchestration on Nostr" />
   <meta property="og:title" content="Coinstr is Bitcoin multi-custody signature orchestration on Nostr" />
-  <meta property="og:url" content="https://coinstr.app" />
+  <meta property="og:url" content="https://coinstr.io" />
 </head>
 
 # Coinstr is Bitcoin spending policy and signature orchestration using Taproot and Nostr

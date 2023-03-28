@@ -1,4 +1,4 @@
-baseURL = 'https://coinstr.app'
+baseURL = 'https://coinstr.io'
 languageCode = 'en-us'
 title = 'Coinstr'
 paginate = 3

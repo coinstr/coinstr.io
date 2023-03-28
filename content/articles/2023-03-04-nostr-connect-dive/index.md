@@ -11,13 +11,13 @@ authors: Max Gravitt
   <title>🤿 Nostr Connect Technical Deep Dive</title>
   <meta charSet="utf-8" />
   <meta property="og:title" content="🤿 Nostr Connect Technical Deep Dive" />
-  <meta property="og:image" content="https://coinstr.app//articles/nostr-connect-deep-dive/bob-login-cover.png" />
+  <meta property="og:image" content="https://coinstr.io//articles/nostr-connect-deep-dive/bob-login-cover.png" />
   <meta property="og:description" content="Nostr Connect can be used to create a seamless flow where users do their work in the browser, while signing using their devices safely and securely. This articles describes the UX and specific message flows for how a circuit is created and how Bob can login to update and publish his work from multiple devices." />
-  <meta property="og:url" content="https://coinstr.app/articles/nostr-connect-deep-dive" />
+  <meta property="og:url" content="https://coinstr.io/articles/nostr-connect-deep-dive" />
   <meta name="twitter:title" content="🤿 Nostr Connect Technical Deep Dive" />
   <meta name="twitter:creator" content="@MaxGravitt">
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="https://coinstr.app//articles/nostr-connect-deep-dive/bob-login-cover.png" />
+  <meta name="twitter:image" content="https://coinstr.io//articles/nostr-connect-deep-dive/bob-login-cover.png" />
   <meta name="twitter:description" content="Nostr Connect can be used to create a seamless flow where users do their work in the browser, while signing using their devices safely and securely. This articles describes the UX and specific message flows for how a circuit is created and how Bob can login to update and publish his work from multiple devices." />
 
 </head>
@@ -123,7 +123,7 @@ Establishing secure, flexible, and real time communications between the browser 
 # ₿ Postscript: Bitcoin Signatures in Nostr Connect (??)
 I am an admitted and unashamed stalker of open source developers. I noticed that yesterday, the author of the [Nostr Connect](https://github.com/nostr-connect/connect) protocol and the reference implementation [Nostrum](https://github.com/nostr-connect/nostrum) starred and forked a Javascript library for **signing and decoding Bitcoin transactions**. 
 
-[Coinstr](https://coinstr.app) is very interested in using this protocol to sign more than Nostr events, especially Bitcoin. We will keep a close eye on what transpires.
+[Coinstr](https://coinstr.io) is very interested in using this protocol to sign more than Nostr events, especially Bitcoin. We will keep a close eye on what transpires.
 
 <img src="https://user-images.githubusercontent.com/32852271/222914638-fe23a97b-d616-428e-8c52-42e316881c60.png" width="400"/>
 

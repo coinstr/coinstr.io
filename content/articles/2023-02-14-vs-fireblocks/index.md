@@ -9,10 +9,10 @@ authors: Max Gravitt
 <head>
   <title>Coinstr vs Fireblocks Comparison</title>
   <meta charSet="utf-8" />
-  <meta property="og:image" content="https://coinstr.app/coinstr-mindmap.png" />
+  <meta property="og:image" content="https://coinstr.io/coinstr-mindmap.png" />
   <meta property="og:description" content="Detailed head-to-head comparison between Hashed Network and Fireblocks" />
   <meta property="og:title" content="Coinstr vs Fireblocks Comparison" />
-  <meta property="og:url" content="https://coinstr.app/articles/vs-fireblocks" />
+  <meta property="og:url" content="https://coinstr.io/articles/vs-fireblocks" />
 </head>
 
 ## What is Fireblocks? 
