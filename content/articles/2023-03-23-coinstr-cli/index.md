@@ -53,7 +53,7 @@ For this tutorial, you'll need to [install rust](https://rustup.rs) and also bui
 
 ## Step 1. Build Coinstr
 ```
-git clone https://github.com/NostrDevKit/coinstr.git && cd coinstr && cargo build --release
+git clone https://github.com/coinstr/coinstr.git && cd coinstr && cargo build --release
 ```
 
 ## Step 2. Setup Keys

@@ -6,8 +6,6 @@
   <main id="main">
     <div class="content">
       {{ partial "header.html" . }}
-      {{ .Content }}
-      {{ if gt (len ( where .Site.RegularPages "Section" "articles" )) 0 }}
       <h1>Latest Articles</h1>
       <section>
         {{ range (first 3 (where .Site.RegularPages "Section" "articles" ).ByDate.Reverse) }}
@@ -17,6 +15,8 @@
           <p>
         {{ end }}
       </section>
+      {{ .Content }}
+      {{ if gt (len ( where .Site.RegularPages "Section" "articles" )) 0 }}      
       {{ end }}
     </div>
   </main>
